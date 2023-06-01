@@ -10,7 +10,7 @@ import {
   Label,
   Quantity
 } from './Profile.styled';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
@@ -41,9 +41,13 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
 };
 
 Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  stats: PropTypes.object.isRequired,
+  username: propTypes.string.isRequired,
+  tag: propTypes.string.isRequired,
+  location: propTypes.string.isRequired,
+  avatar: propTypes.string.isRequired,
+  stats: propTypes.shape({
+    followers: propTypes.number,
+    views: propTypes.number,
+    likes: propTypes.number,
+  }),
 };

@@ -11,14 +11,14 @@ import propTypes from 'prop-types';
 export const Statistics = ({ title, stats }) => {
   return (
     <Section>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
 
       <StatList>
         {stats.map(({ id, label, percentage }) => {
           return (
             <Item key={id}>
               <Label>{label}</Label>
-              <Percentage>{percentage}</Percentage>
+              <Percentage>{percentage}%</Percentage>
             </Item>
           );
         })}
