@@ -1,4 +1,4 @@
-import { StatList, Item, Photo, Name, Status } from "components/FriendList/FriendList.styled"
+import { Item, Photo, Name, Status } from "components/FriendList/FriendList.styled"
 import propTypes from 'prop-types';
 
 export const FriendListItem = ({ props }) => {
